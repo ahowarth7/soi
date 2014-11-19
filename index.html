@@ -21,18 +21,24 @@
 <script type="text/javascript"> 
 $(document).ready(function() { 
 	$("#btn_inicio").click(function() { //aqui llamas al boton con el id=btn_inicio
-		$('.secc1').load("inicio.html"); 
+		$('.posts').load("soi_contenido.html"); 
+	});
+	$("#btn_oficio").click(function() { //aqui llamas al boton con el id=btn_inicio
+		$('.posts').load("php/soi_formulario_oficio.php"); 
 	}); 
 
-	$("#btn_nosotros").click(function() { //aqui llamas al boton con el id=btn_nosotros
-		$('.secc1').load("nosotros.html"); 
+	$("#btn_memo").click(function() { //aqui llamas al boton con el id=btn_nosotros
+		$('.posts').load("nosotros.html"); 
 	});
-	$("#btn_contacto").click(function() { //aqui llamas al boton con el id=btn_nosotros
-		$('.secc1').load("contacto.html"); 
+	$("#btn_comunicado").click(function() { //aqui llamas al boton con el id=btn_nosotros
+		$('.posts').load("contacto.html"); 
 	}); 
 }); 
 
 </script>
+<?php
+	include("php/conexion_db.php");
+?>
 </head>
 <body>
 	<header>
@@ -61,8 +67,8 @@ $(document).ready(function() {
 	</header>
 	<nav>
 		<ul class="menu">
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Crear Numero de Oficio</a></li>
+			<li><a href="#" id="btn_inicio">Inicio</a></li>
+			<li><a href="#" id="btn_oficio">Crear Numero de Oficio</a></li>
 			<li><a href="#">Memorandum</a></li>
 			<li><a href="#">Comunicados Electronicos</a></li>
 		</ul>
@@ -71,56 +77,13 @@ $(document).ready(function() {
 
 	<!-- Formulario -->
 	<section class="posts">
-		<form class="contact_form" action="" method="post" name="contact_form">
-		<article class="post">
-			<div class="descripcion">
-				<figure class="imagen">
-					<img src="img/document-index-icon.png" />
-				</figure>
-				
-
-					<datalist id="lista">
-						<option value="Formación Tecnica"></option>
-					</datalist>
-					<datalist id="tipo_oficio">
-						<option value="Memorandum"></option>
-						<option value="Comunicado Electronico"></option>
-					</datalist>
-					<datalist id="lista_nombres">
-						<option value="Ingrid Lizama"></option>
-						<option value="Nayeli Díaz"></option>
-						<option value="Miguel Flores"></option>
-						<option value="Josue Pastrana"></option>
-						<option value="Nery Perez"></option>
-					</datalist>
-
-				<div class="detalles">
-					<h2 class="titulo">
-						Formulario de Creación de Oficios
-					</h2>
-					<p><label for="name">Tipo de Documento:</label> <input name="tipo_oficio" list="tipo_oficio"></p>
-					<p><label for="name">Fecha de Emicisión:</label><input type="datetime" name="fecha" step="1" /></p>
-					<p><label for="name">Área:</label> <input name="lista_area" list="lista"></p>
-					<p><label for="name">Asunto:</label><input type="text" name="asunto"></p>
-					<p><label for="name">Descripción:</label><textarea rows="10" cols="30"></textarea></p>
-					<p><label for="name">Dirigido A:</label><input type="text" name="dirigido"></p>
-					<p><label for="name">Cargo:</label><input type="text" name="asunto"></p>
-					<p><label for="name">Emitido Por:</label><input name="lista_nombres" list="lista_nombres"></p>
-					<p><label for="name">Agregar Oficio:</label><input type="file" accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></p>
-				</div>
-			</div>
-			<div class="acciones">
-				<div class="votos">
-					<a class="tag" href="#">Enviar</a>
-				</div>
-			</div>
-		</article>
-		</form>
+		<h2>Bienvenido</h2>
+		<p>Selecciones entre nuestras opciones la que a usted le paresca</p>
 	</section>
-<footer id="footer" class="footer clearfix">
-    <div class="container">
-	        <h3>ÁREA DE DESARROLLO DE LA JEFATURA DE FORMACIÓN TECNICA</h3>
-    </div>
-</footer>
+	<footer id="footer" class="footer clearfix">
+	    <div class="container">
+		        <h3>ÁREA DE DESARROLLO DE LA JEFATURA DE FORMACIÓN TECNICA</h3>
+	    </div>
+	</footer>
 </body>
 </hmtl>
