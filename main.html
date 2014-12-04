@@ -1,0 +1,61 @@
+<script type="text/javascript"> 
+    $(document).ready(function() { 
+            $("#btn_inicio").click(function() { //aqui llamas al boton con el id=btn_inicio
+                $('.posts').load("soi_contenido.html"); 
+            });
+            $("#btn_oficio").click(function() { //aqui llamas al boton con el id=btn_inicio
+                $('.posts').load("soi_formulario_oficio.html"); 
+            }); 
+
+            $("#btn_memo").click(function() { //aqui llamas al boton con el id=btn_nosotros
+                $('.posts').load("nosotros.html"); 
+            });
+            $("#btn_comunicado").click(function() { //aqui llamas al boton con el id=btn_nosotros
+                $('.posts').load("contacto.html"); 
+            }); 
+    }); 
+</script>
+
+<!-- Encabezado -->
+<header>
+	<div class="logo">
+			<img src="img/conalepqroo.png" alt="Puls4" />
+		</div>
+		<div class="titular">
+			<h1 class="titulo">
+				Sistema de Oficios Internos de Conalep Quintana Ro
+			</h1>
+		<div>
+			<a class="filtro" href="#">Formación Tecnica</a>
+			<a class="publicar" href="#" id="nombre_usuario"></a>
+		</div>
+	</div>
+	<div class="usuario">
+		<figure class="avatar">
+			<img src="img/user-1-icon.png" alt="freddier" />
+		</figure>
+		<a class="flechita" href="#"></a>
+	</div>
+</header>
+<!-- Navegación -->
+<nav>
+	<ul class="menu">
+		<li><a href="#" id="btn_inicio">Inicio</a></li>
+		<li><a href="#" id="btn_oficio">Crear Numero de Oficio</a></li>
+		<li><a href="#">Memorandum</a></li>
+		<li><a href="#">Comunicados Electronicos</a></li>
+	</ul>
+</nav>
+
+<!-- Cuerpo -->
+<section class="posts">
+		<h2>Bienvenido</h2>
+		<p>Selecciones entre nuestras opciones la que a usted le paresca</p>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="footer clearfix">
+	    <div class="container">
+		        <h3>ÁREA DE DESARROLLO DE LA JEFATURA DE FORMACIÓN TECNICA</h3>
+	    </div>
+</footer>
