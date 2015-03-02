@@ -1,46 +1,76 @@
-<form id="contact_form" method="post" name="form_agregaroficio" action="soi_formulario_guardar.php">
-		<article class="post">
-			<div class="descripcion">
-				<figure class="imagen">
-					<img src="img/document-index-icon.png" />
-				</figure>
-				
-
-					<datalist id="lista">
-						<option value="Formación Tecnica"></option>
-					</datalist>
-					<datalist id="tipo_oficio">
-						<option value="Memorandum"></option>
-						<option value="Comunicado Electronico"></option>
-					</datalist>
-					<datalist id="lista_nombres">
-						<option value="Ingrid Lizama"></option>
-						<option value="Nayeli Díaz"></option>
-						<option value="Miguel Flores"></option>
-						<option value="Josue Pastrana"></option>
-						<option value="Nery Perez"></option>
-					</datalist>
-
-				<div class="detalles">
-					<h2 class="titulo">
-						Formulario de Creación de Oficios
-					</h2>
-					<p><label for="name">Tipo de Documento:</label> <input name="tipo_oficio" list="tipo_oficio" autofocus="autofocus"></p>
-					<p><label for="name">Fecha de Emicisión:</label><input type="date" value="<?php echo date('Y-m-d'); ?>" name="fecha" /></p>
-					<p><label for="name">Área:</label> <input name="lista_area" list="lista"></p>
-					<p><label for="name">Asunto:</label><input type="text" name="asunto" autocomplete="on"></p>
-					<p><label for="name">Descripción:</label><textarea rows="3" cols="5"></textarea></p>
-					<p><label for="name">Dirigido A:</label><input type="text" name="dirigido" autocomplete="on"></p>
-					<p><label for="name">Cargo:</label><input type="text" name="asunto" autocomplete="on"></p>
-					<p><label for="name">Emitido Por:</label><input name="lista_nombres" list="lista_nombres"></p>
-					<p><label for="name">Agregar Oficio:</label><input type="file" accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></p>
-				</div>
+<form action="" method="POST" role="form" class="form-horizontal">
+	<legend>Formulario de Creación de Oficios</legend>
+	<div class="form-group">
+			<!--////////////////////-->		
+			<label for="input" class="col-md-2 control-label">Tipo de Documento:</label>
+			<div class="col-md-10">
+				<select name="" id="sel1" class="form-control">
+					<option></option>
+		            <option>Memorandum</option>
+		            <option>Comunicado Electronico</option>
+				</select>
 			</div>
-			<div class="acciones">
-				<div class="votos">
-					<a class="tag1" href="#">Cancelar</a>
-					<input type="button" id="btn-enviar" value="Enviar" name="enviar" />
-				</div>
+			<!--////////////////////-->		
+			<label for="input" class="col-sm-2 control-label">Fecha de Emición:</label>
+			<div class="col-sm-10">
+				<input type="date" name="fecha" class="form-control" id="inputFecha"  value="" required="required" title="">
 			</div>
-		</article>
+			<!--////////////////////-->		
+			<label for="input" class="col-sm-2 control-label">Área:</label>
+			<div class="col-sm-10">
+				<select class="form-control" id="sel2">
+					<option></option>
+		            <option>Formación Tecnica</option>
+		            <option>Vinculación</option>
+         		</select>
+			</div>
+			<!--////////////////////-->		
+			<label for="input" class="col-sm-2 control-label">Asunto:</label>
+			<div class="col-sm-10">
+				<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+			</div>
+			<!--////////////////////-->		
+			<label for="input" class="col-sm-2 control-label">Descripción</label>
+			<div class="col-sm-10">
+				<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+			</div>
+			<!--////////////////////-->		
+			<label for="input" class="col-sm-2 control-label">Dirigido A:</label>
+			<div class="col-sm-10">
+				<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+			</div>
+			<!--////////////////////-->		
+			<label for="input" class="col-sm-2 control-label">Fecha de Emición:</label>
+			<div class="col-sm-10">
+				<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+			</div>
+			<!--////////////////////-->		
+			<label for="input" class="col-sm-2 control-label">Cargo:</label>
+			<div class="col-sm-10">
+				<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+			</div>
+			<!--////////////////////-->		
+			<label for="input" class="col-sm-2 control-label">Emitido Por:</label>
+			<div class="col-sm-10">
+				<select class="form-control" id="sel3">
+					<option></option>
+		            <option> Ingrid Lizama</option>
+					<option value="Nayeli Díaz"></option>
+					<option value="Miguel Flores"></option>
+					<option value="Josue Pastrana"></option>
+					<option value="Nery Perez"></option>
+         		</select>
+			</div>
+			<label for="input" class="col-sm-2 control-label">Agregar Oficio:</label>
+			<div class="col-sm-10">
+				<input class="form-control input-sm" type="file" accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+			</div>
+			
+	</div>
+	<br>
+	<div class="text-right">
+	<button type="button" class="btn btn-danger">Cancelar</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+	<button type="submit" class="btn btn-primary">Guardar</button>
+	</div>
 </form>

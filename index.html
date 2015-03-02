@@ -21,20 +21,22 @@
      <!-- ESTILOS --> 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">  
     <link rel="stylesheet" href="css/normalize.css" />
+      <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/styles.css"> 
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+      
     <!-- Scripts -->
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
 
     
 </head>
 <body>
 <!-- Contenedor de login y main -->
 <div id="contenedor">
+
     <header>
         <div class="logo">
             <img src="img/conalepqroo.png" alt="Puls4" />
@@ -47,12 +49,11 @@
         
     </header>
     <div class="login">
-        <h2>Bienvenido</h2>
+        <h2>Bienvenido<br/><small>Acceso a usuarios </small></h2>
         <form>
-            <p>Acceso a usuarios</p>
             <input id="username" type="text" name="username" placeholder="Nombre de Usuario" required="required" />
             <input id="pass" type="password" name="password" placeholder="Contraseña" required="required" />
-            <input type="submit" class="btn btn-primary btn-block btn-large" value="Acceder">
+            <input type="submit" id="btn" class="btn btn-primary btn-large" value="Acceder">
         </form>
         <i class="fa fa-refresh fa-spin"></i>&nbsp;<span class="mensaje"></span>
     </div>
